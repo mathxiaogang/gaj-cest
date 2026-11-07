@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gaj"
+version = "0.1.0"
+description = "Gated analytic Jacobian for fast fitting of linear drive-and-observe models, with application to multi-pool CEST"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Gang Xiao", email = "xiao.math@foxmail.com"}]
+keywords = ["CEST", "Bloch-McConnell", "analytic Jacobian", "model fitting", "MRI"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Scientific/Engineering :: Medical Science Apps.",
+  "Topic :: Scientific/Engineering :: Mathematics",
+]
+dependencies = ["numpy>=1.24", "scipy>=1.10"]
+
+[project.optional-dependencies]
+plots = ["matplotlib>=3.7"]
+test = ["pytest>=7"]
+
+[project.scripts]
+gaj = "gaj.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

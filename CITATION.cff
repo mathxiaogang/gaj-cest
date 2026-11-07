@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+title: "GAJ: a gated analytic Jacobian for fast fitting of linear drive-and-observe models, with application to multi-pool CEST"
+message: "If you use this code, please cite the paper and this repository."
+type: software
+authors:
+  - family-names: Xiao
+    given-names: Gang
+    email: xiao.math@foxmail.com
+    affiliation: "School of Mathematics and Statistics, Hanshan Normal University, Chaozhou, China"
+repository-code: "https://github.com/mathxiaogang/gaj-cest"
+license: MIT
+version: 0.1.0
+date-released: 2026-11-07
+keywords:
+  - CEST
+  - Bloch-McConnell
+  - analytic Jacobian
+  - nonlinear least squares
+  - model fitting

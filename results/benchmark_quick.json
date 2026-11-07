@@ -1,0 +1,247 @@
+{
+  "stage_a": {
+    "t_forward_ms": 3.417499829083681,
+    "rows": [
+      [
+        "forward, surrogate",
+        3.417499829083681,
+        1.0
+      ],
+      [
+        "forward, exact (expm)",
+        7.243500091135502,
+        2.1195319541764746
+      ],
+      [
+        "Jacobian, GAJ (gated series)",
+        12.088799849152565,
+        3.5373227370120692
+      ],
+      [
+        "Jacobian, Batch-C (central diff. of surrogate)",
+        153.54169998317957,
+        44.928078321030384
+      ],
+      [
+        "Jacobian, Trad-C (central diff. of exact model)",
+        533.8560999371111,
+        156.2124730464878
+      ]
+    ],
+    "gaj_accepted_order": 6,
+    "gaj_eta": 6.971148098691888e-10,
+    "gaj_used_fallback": false,
+    "gaj_term_norms": [
+      10.805911495131372,
+      0.22947332313086552,
+      0.004874704548363182,
+      0.00013137475972522565,
+      4.266514047132536e-06,
+      2.3504763440872836e-07
+    ],
+    "speedup_vs_batchC": 12.701153290576068,
+    "speedup_vs_tradC": 44.16121588567246
+  },
+  "summary": [
+    {
+      "tol": 1e-08,
+      "configs": {
+        "GAJ": {
+          "pass_rate": 0.0,
+          "wilson": [
+            0.0,
+            0.7934506882081973
+          ],
+          "median_seconds": 1.5171870000194758,
+          "median_nfev": 65.0,
+          "median_max_error": 0.07795207714043573,
+          "fallback_fraction": 0.05357142857142857
+        },
+        "Batch-C": {
+          "pass_rate": 0.0,
+          "wilson": [
+            0.0,
+            0.7934506882081973
+          ],
+          "median_seconds": 8.369121999945492,
+          "median_nfev": 64.0,
+          "median_max_error": 0.07792759869532512,
+          "fallback_fraction": 0.0
+        },
+        "Trad-C": {
+          "pass_rate": 0.0,
+          "wilson": [
+            0.0,
+            0.7934506882081973
+          ],
+          "median_seconds": 46.140779400011525,
+          "median_nfev": 109.0,
+          "median_max_error": 0.07792624570762116,
+          "fallback_fraction": 0.0
+        }
+      }
+    },
+    {
+      "tol": 1e-09,
+      "configs": {
+        "GAJ": {
+          "pass_rate": 1.0,
+          "wilson": [
+            0.2065493117918027,
+            1.0
+          ],
+          "median_seconds": 2.1895922999829054,
+          "median_nfev": 116.0,
+          "median_max_error": 0.04645600755488116,
+          "fallback_fraction": 0.03225806451612903,
+          "speedup_vs_Batch-C": {
+            "median": 5.897472419881913,
+            "min": 5.897472419881913,
+            "max": 5.897472419881913,
+            "n_cases": 1
+          },
+          "speedup_vs_Trad-C": {
+            "median": 33.483754852705964,
+            "min": 33.483754852705964,
+            "max": 33.483754852705964,
+            "n_cases": 1
+          }
+        },
+        "Batch-C": {
+          "pass_rate": 1.0,
+          "wilson": [
+            0.2065493117918027,
+            1.0
+          ],
+          "median_seconds": 12.91306019993499,
+          "median_nfev": 106.0,
+          "median_max_error": 0.046435860642246446,
+          "fallback_fraction": 0.0
+        },
+        "Trad-C": {
+          "pass_rate": 1.0,
+          "wilson": [
+            0.2065493117918027,
+            1.0
+          ],
+          "median_seconds": 73.31577180000022,
+          "median_nfev": 169.0,
+          "median_max_error": 0.046435178309432584,
+          "fallback_fraction": 0.0
+        }
+      }
+    }
+  ],
+  "runs": [
+    {
+      "case": "case1",
+      "config": "GAJ",
+      "seconds": 1.5171870000194758,
+      "nfev": 65,
+      "njev": 56,
+      "sse": 9.01404651800447e-09,
+      "max_error": 0.07795207714043573,
+      "ok": false,
+      "spectral_error": 7.830711194556644e-06,
+      "accepted_orders": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "fallbacks": 3
+    },
+    {
+      "case": "case1",
+      "config": "Batch-C",
+      "seconds": 8.369121999945492,
+      "nfev": 64,
+      "njev": 55,
+      "sse": 9.009383595606418e-09,
+      "max_error": 0.07792759869532512,
+      "ok": false,
+      "spectral_error": 7.828685989828015e-06,
+      "accepted_orders": [],
+      "fallbacks": 0
+    },
+    {
+      "case": "case1",
+      "config": "Trad-C",
+      "seconds": 46.140779400011525,
+      "nfev": 109,
+      "njev": 86,
+      "sse": 9.009538149927966e-09,
+      "max_error": 0.07792624570762116,
+      "ok": false,
+      "spectral_error": 7.828752643659387e-06,
+      "accepted_orders": [],
+      "fallbacks": 0
+    },
+    {
+      "case": "case1",
+      "config": "GAJ",
+      "seconds": 2.1895922999829054,
+      "nfev": 116,
+      "njev": 93,
+      "sse": 4.293140703579165e-09,
+      "max_error": 0.04645600755488116,
+      "ok": true,
+      "spectral_error": 5.404168336786552e-06,
+      "accepted_orders": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "fallbacks": 3
+    },
+    {
+      "case": "case1",
+      "config": "Batch-C",
+      "seconds": 12.91306019993499,
+      "nfev": 106,
+      "njev": 86,
+      "sse": 4.293754195658968e-09,
+      "max_error": 0.046435860642246446,
+      "ok": true,
+      "spectral_error": 5.404554394873892e-06,
+      "accepted_orders": [],
+      "fallbacks": 0
+    },
+    {
+      "case": "case1",
+      "config": "Trad-C",
+      "seconds": 73.31577180000022,
+      "nfev": 169,
+      "njev": 131,
+      "sse": 4.29431620910765e-09,
+      "max_error": 0.046435178309432584,
+      "ok": true,
+      "spectral_error": 5.404907837332676e-06,
+      "accepted_orders": [],
+      "fallbacks": 0
+    }
+  ],
+  "protocol": {
+    "starts": 3,
+    "cases": 1,
+    "tols": [
+      1e-08,
+      1e-09
+    ],
+    "pages": 147,
+    "p": 17,
+    "python": "3.12.10",
+    "numpy": "2.2.6"
+  }
+}
